@@ -2,9 +2,9 @@ import { FeeAmount } from '@pancakeswap/v3-sdk'
 import { ZoomLevels, ZOOM_LEVELS } from 'components/LiquidityChartRangeInput/types'
 
 export enum SELECTOR_TYPE {
-  V3,
-  STABLE,
   V2,
+  STABLE,
+  V3,
 }
 
 interface HandleFeePoolSelectArgs {

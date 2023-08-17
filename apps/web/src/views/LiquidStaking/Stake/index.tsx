@@ -23,7 +23,7 @@ export const LiquidStakingPageStake: React.FC<LiquidStakingPageStakeProps> = ({
       <AppHeader
         shouldCenter
         subtitle={t('Unlock liquidity while earning rewards')}
-        title={t('Liquid Staking')}
+        title={t('Stake service')}
         noConfig
       />
       <CardBody>

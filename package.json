@@ -18,7 +18,7 @@
     "storybook": "turbo run start --filter=uikit...",
     "build:storybook": "turbo run build:storybook --filter=uikit...",
     "build": "turbo run build --filter=web...",
-    "build:blog": "turbo run build --filter=blog...",
+    
     "build:aptos": "turbo run build --filter=aptos-web...",
     "build:bridge": "turbo run build --filter=bridge...",
     "build:packages": "turbo run build --filter=./packages/*",

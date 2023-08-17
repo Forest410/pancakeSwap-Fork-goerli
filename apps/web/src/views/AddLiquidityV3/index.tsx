@@ -68,7 +68,7 @@ export const ResponsiveTwoColumns = styled.div`
   }
 `
 
-const selectTypeAtom = atom(SELECTOR_TYPE.V3)
+const selectTypeAtom = atom(SELECTOR_TYPE.V2)
 
 interface UniversalAddLiquidityPropsType {
   currencyIdA: string
@@ -282,7 +282,7 @@ export function UniversalAddLiquidity({
                 hideBalance
               />
             </FlexGap>
-            <DynamicSection disabled={!baseCurrency || !currencyB}>
+            {/* <DynamicSection disabled={!baseCurrency || !currencyB}>
               {!isV2 &&
                 stableConfig.stableSwapConfig &&
                 [SELECTOR_TYPE.STABLE, SELECTOR_TYPE.V3].includes(selectorType) && (
@@ -315,7 +315,7 @@ export function UniversalAddLiquidity({
                   handleSelectV2={() => setSelectorType(SELECTOR_TYPE.V2)}
                 />
               )}
-            </DynamicSection>
+            </DynamicSection> */}
           </AutoColumn>
           {selectorType === SELECTOR_TYPE.STABLE && (
             <StableConfigContext.Provider value={stableConfig}>

@@ -200,11 +200,11 @@ export default function PoolListPage() {
 
   return (
     <Page>
-      {isMigrationSupported && (
+      {/* {isMigrationSupported && (
         <Flex m="24px 0" maxWidth="854px">
           <FarmV3MigrationBanner />
         </Flex>
-      )}
+      )} */}
       <AppBody
         style={{
           maxWidth: '854px',
@@ -218,37 +218,37 @@ export default function PoolListPage() {
               <HistoryIcon color="textSubtle" width="24px" />
             </IconButton>
           }
-          filter={
-            <>
-              <Flex as="label" htmlFor="hide-close-positions" alignItems="center">
-                <Checkbox
-                  id="hide-close-positions"
-                  scale="sm"
-                  name="confirmed"
-                  type="checkbox"
-                  checked={hideClosedPositions}
-                  onChange={() => setHideClosedPositions((prev) => !prev)}
-                />
-                <Text ml="8px" color="textSubtle" fontSize="14px">
-                  {t('Hide closed positions')}
-                </Text>
-              </Flex>
+          // filter={
+          //   <>
+          //     <Flex as="label" htmlFor="hide-close-positions" alignItems="center">
+          //       <Checkbox
+          //         id="hide-close-positions"
+          //         scale="sm"
+          //         name="confirmed"
+          //         type="checkbox"
+          //         checked={hideClosedPositions}
+          //         onChange={() => setHideClosedPositions((prev) => !prev)}
+          //       />
+          //       <Text ml="8px" color="textSubtle" fontSize="14px">
+          //         {t('Hide closed positions')}
+          //       </Text>
+          //     </Flex>
 
-              <ButtonMenu
-                scale="sm"
-                activeIndex={selectedTypeIndex}
-                onItemClick={(index) => setSelectedTypeIndex(index)}
-                variant="subtle"
-              >
-                <ButtonMenuItem>{t('All')}</ButtonMenuItem>
-                <ButtonMenuItem>V3</ButtonMenuItem>
-                <ButtonMenuItem display={isStableSwapSupported(chainId) ? 'inline-flex' : 'none'}>
-                  {t('StableSwap')}
-                </ButtonMenuItem>
-                <ButtonMenuItem>V2</ButtonMenuItem>
-              </ButtonMenu>
-            </>
-          }
+          //     <ButtonMenu
+          //       scale="sm"
+          //       activeIndex={selectedTypeIndex}
+          //       onItemClick={(index) => setSelectedTypeIndex(index)}
+          //       variant="subtle"
+          //     >
+          //       <ButtonMenuItem>{t('All')}</ButtonMenuItem>
+          //       <ButtonMenuItem>V3</ButtonMenuItem>
+          //       <ButtonMenuItem display={isStableSwapSupported(chainId) ? 'inline-flex' : 'none'}>
+          //         {t('StableSwap')}
+          //       </ButtonMenuItem>
+          //       <ButtonMenuItem>V2</ButtonMenuItem>
+          //     </ButtonMenu>
+          //   </>
+          // }
         />
         <Body>
           {mainSection}
